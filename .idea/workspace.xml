@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="a54f4fc0-58dd-4d5f-822d-7020a4f58509" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layouts/components/vertical/AppBarContent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/components/vertical/AppBarContent.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitToolBoxStore">
+    <option name="recentBranches">
+      <RecentBranches>
+        <option name="branchesForRepo">
+          <list>
+            <RecentBranchesForRepo>
+              <option name="branches">
+                <list>
+                  <RecentBranch>
+                    <option name="branchName" value="staging" />
+                    <option name="lastUsedInstant" value="1692281167" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="fetature/permissions-and-settings" />
+                    <option name="lastUsedInstant" value="1692181729" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="feature/super-admin-module" />
+                    <option name="lastUsedInstant" value="1690277507" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="resller" />
+                    <option name="lastUsedInstant" value="1690181805" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="feature/auth-module-integration" />
+                    <option name="lastUsedInstant" value="1689076157" />
+                  </RecentBranch>
+                </list>
+              </option>
+              <option name="repositoryRootUrl" value="file://$PROJECT_DIR$" />
+            </RecentBranchesForRepo>
+          </list>
+        </option>
+      </RecentBranches>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2S3iEtWnD5SoLRVb037ILb07GG6" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;staging&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/mac/Downloads/0-data/office/gorex-revamp-fe&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;yarn&quot;,
+    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;/Users/mac/Downloads/0-data/office/gorex-revamp-fe/node_modules/prettier&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Applications/WebStorm.app/Contents/plugins/javascript-impl/jsLanguageServicesImpl/external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/pages/admin-settings/permissions" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a54f4fc0-58dd-4d5f-822d-7020a4f58509" name="Changes" comment="" />
+      <created>1688381563731</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1688381563731</updated>
+      <workItem from="1688381566448" duration="643000" />
+      <workItem from="1688563749557" duration="344000" />
+      <workItem from="1689053752126" duration="2224000" />
+      <workItem from="1690348718894" duration="28000" />
+      <workItem from="1690349045681" duration="13987000" />
+      <workItem from="1690437862408" duration="18508000" />
+      <workItem from="1690790233349" duration="14896000" />
+      <workItem from="1690869474154" duration="18065000" />
+      <workItem from="1690955578325" duration="14234000" />
+      <workItem from="1691042466629" duration="2300000" />
+      <workItem from="1691305217175" duration="5463000" />
+      <workItem from="1691371868482" duration="11395000" />
+      <workItem from="1691387795029" duration="21224000" />
+      <workItem from="1691476667741" duration="19524000" />
+      <workItem from="1691564111818" duration="14780000" />
+      <workItem from="1691586747022" duration="3924000" />
+      <workItem from="1691648694411" duration="568000" />
+      <workItem from="1691748632523" duration="10086000" />
+      <workItem from="1691860076079" duration="5420000" />
+      <workItem from="1691904618923" duration="24147000" />
+      <workItem from="1692080255347" duration="9903000" />
+      <workItem from="1692166903096" duration="6665000" />
+      <workItem from="1692259872304" duration="17232000" />
+      <workItem from="1692521062441" duration="1025000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

@@ -1,0 +1,74 @@
+import React from 'react'
+import PropTypes from 'prop-types'
+
+// ** Styled Components
+import { TableWrapper } from 'src/styles/pages/settings'
+import { useCommonStyles } from 'src/styles/common'
+
+// ** Third Party Components
+import { Icon } from '@iconify/react'
+import DataTable from 'react-data-table-component'
+
+// ** Custom Components
+import { columns, rows } from './table.data'
+import Spinner from 'src/@core/components/spinner'
+
+// ** pagination
+import ReactPagination from 'src/components/pagination'
+
+function WarehouseMonitoringTable(props) {
+  const {
+    // rows,
+    page,
+    limit,
+    total,
+    loading,
+    router,
+    ability,
+    handleLimitChange,
+    handlePageChange
+  } = props
+  const common = useCommonStyles()
+
+  return (
+    <TableWrapper className='selectable-cols' sx={{
+      "& .rdt_Table":{
+        height: '80vh',
+        overflowY: 'auto'
+      }
+      }}>
+      <DataTable
+        data={rows}
+        pointerOnHover
+        rowsPerPage={limit}
+        progressPending={loading}
+        className={common.dataTable}
+        progressComponent={<Spinner />}
+        columns={columns({ ability, router })}
+        sortIcon={<Icon icon='lucide:chevrons-up-down' width='13' height='13' />}
+        selectableRows
+      />
+      {total > 10 && (
+        <ReactPagination
+          total={total}
+          limit={limit}
+          page={page}
+          handleLimit={e => handleLimitChange(e)}
+          handlePagination={(e, page) => handlePageChange(page)}
+        />
+      )}
+    </TableWrapper>
+  )
+}
+
+export default WarehouseMonitoringTable
+
+WarehouseMonitoringTable.propTypes = {
+  loading: PropTypes.bool,
+  rows: PropTypes.array.isRequired,
+  page: PropTypes.number,
+  limit: PropTypes.number,
+  total: PropTypes.number,
+  handleLimitChange: PropTypes.func.isRequired,
+  handlePageChange: PropTypes.func.isRequired
+}

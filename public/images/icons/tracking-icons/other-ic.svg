@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
+  <g id="other-ic" transform="translate(-10.783 -40.822)">
+    <g id="Ellipse_31" data-name="Ellipse 31" transform="translate(10.783 40.822)" fill="#ff8b00" stroke="rgba(255,39,0,0.1)" stroke-width="4">
+      <circle cx="20" cy="20" r="20" stroke="none"/>
+      <circle cx="20" cy="20" r="18" fill="none"/>
+    </g>
+    <g id="noun_Location_3505552" transform="translate(23.342 11.585)">
+      <path id="Path_967" data-name="Path 967" d="M7.845,38.8a7.847,7.847,0,0,1,7.845,7.845c0,4.692-3.58,9.845-6.845,13.4a1.363,1.363,0,0,1-2.007,0C3.58,56.49,0,51.337,0,46.645A7.847,7.847,0,0,1,7.845,38.8Zm0,5.1A2.741,2.741,0,1,1,5.1,46.645,2.741,2.741,0,0,1,7.845,43.9Z" transform="translate(0 0)" fill="#fff" fill-rule="evenodd"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,113 @@
+@mixin leftMargins {
+  @for $i from 1 through 20 {
+    .ml-#{$i} {
+      margin-left: $i * 1rem !important;
+    }
+  }
+}
+
+@mixin RightMargins {
+  @for $i from 1 through 20 {
+    .mr-#{$i} {
+      margin-right: $i * 1rem !important;
+    }
+  }
+}
+
+@mixin TopMargins {
+  @for $i from 1 through 20 {
+    .mt-#{$i} {
+      margin-top: $i * 1rem !important;
+    }
+  }
+}
+
+@mixin BottomMargins {
+  @for $i from 1 through 20 {
+    .mb-#{$i} {
+      margin-bottom: $i * 1rem !important;
+    }
+  }
+}
+
+@mixin VerticalMargins {
+  @for $i from 1 through 20 {
+    .my-#{$i} {
+      margin-top: $i * 1rem !important;
+      margin-bottom: $i * 1rem !important;
+    }
+  }
+}
+
+@mixin HorizontalMargins {
+  @for $i from 1 through 20 {
+    .mx-#{$i} {
+      margin-left: $i * 1rem !important;
+      margin-right: $i * 1rem !important;
+    }
+  }
+}
+
+@mixin VerticalPaddings {
+  @for $i from 1 through 20 {
+    .py-#{$i} {
+      padding-top: $i * 1rem !important;
+      padding-bottom: $i * 1rem !important;
+    }
+  }
+}
+
+@mixin HorizontalPaddings {
+  @for $i from 1 through 20 {
+    .px-#{$i} {
+      padding-left: $i * 1rem !important;
+      padding-right: $i * 1rem !important;
+    }
+  }
+}
+
+@mixin LeftPaddings {
+  @for $i from 1 through 20 {
+    .pl-#{$i} {
+      padding-left: $i * 1rem !important;
+    }
+  }
+}
+
+@mixin RightPaddings {
+  @for $i from 1 through 20 {
+    .pr-#{$i} {
+      padding-right: $i * 1rem !important;
+    }
+  }
+}
+
+@mixin TopPaddings {
+  @for $i from 1 through 20 {
+    .pt-#{$i} {
+      padding-top: $i * 1rem !important;
+    }
+  }
+}
+
+@mixin BottomPaddings {
+  @for $i from 1 through 20 {
+    .pb-#{$i} {
+      padding-bottom: $i * 1rem !important;
+    }
+  }
+}
+
+// ** Executing Functions
+@include TopMargins;
+@include leftMargins;
+@include RightMargins;
+@include BottomMargins;
+@include VerticalMargins;
+@include HorizontalMargins;
+@include TopPaddings;
+@include LeftPaddings;
+@include RightPaddings;
+@include BottomPaddings;
+@include VerticalPaddings;
+@include HorizontalPaddings;

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
+  <g id="warehouse-ic" transform="translate(-10.783 -40.822)">
+    <g id="Ellipse_31" data-name="Ellipse 31" transform="translate(10.783 40.822)" fill="#ff8b00" stroke="rgba(255,39,0,0.1)" stroke-width="4">
+      <circle cx="20" cy="20" r="20" stroke="none"/>
+      <circle cx="20" cy="20" r="18" fill="none"/>
+    </g>
+    <g id="Group_1313" data-name="Group 1313" transform="translate(21.418 51.45)">
+      <path id="Path_999" data-name="Path 999" d="M18.487,6.358,9.706.114a.585.585,0,0,0-.678,0L.247,6.358A.584.584,0,0,0,0,6.835V9.567a.585.585,0,0,0,.924.478l.637-.453v8.366a.781.781,0,0,0,.781.781H3.9V9.372H14.83v9.366h1.561a.781.781,0,0,0,.781-.781V9.591l.636.453a.587.587,0,0,0,.34.108.6.6,0,0,0,.269-.065.586.586,0,0,0,.317-.521V6.835A.586.586,0,0,0,18.487,6.358Z" fill="#fff"/>
+      <rect id="Rectangle_1621" data-name="Rectangle 1621" width="8.586" height="1.951" transform="translate(5.073 16.787)" fill="#fff"/>
+      <rect id="Rectangle_1622" data-name="Rectangle 1622" width="8.586" height="1.951" transform="translate(5.073 13.664)" fill="#fff"/>
+      <rect id="Rectangle_1623" data-name="Rectangle 1623" width="8.586" height="1.951" transform="translate(5.073 10.542)" fill="#fff"/>
+    </g>
+  </g>
+</svg>

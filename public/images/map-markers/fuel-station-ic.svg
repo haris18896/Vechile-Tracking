@@ -1,0 +1,9 @@
+<svg id="fuel-station-ic" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
+  <g id="Ellipse_31" data-name="Ellipse 31" fill="#fc3b61" stroke="rgba(235,14,56,0.2)" stroke-width="4">
+    <circle cx="20" cy="20" r="20" stroke="none"/>
+    <circle cx="20" cy="20" r="18" fill="none"/>
+  </g>
+  <g id="ic_local_gas_station_24px" transform="translate(7.674 7.918)">
+    <path id="Path_981" data-name="Path 981" d="M19.914,7.269l.01-.01L16.17,3.5,15.1,4.574,17.23,6.7a2.519,2.519,0,0,0,.9,4.874,2.58,2.58,0,0,0,1.009-.212v7.276a1.009,1.009,0,0,1-2.018,0V14.1A2.024,2.024,0,0,0,15.1,12.082H14.092V5.018A2.024,2.024,0,0,0,12.073,3H6.018A2.024,2.024,0,0,0,4,5.018V21.165H14.092V13.6h1.514v5.046a2.523,2.523,0,1,0,5.046,0V9.055A2.525,2.525,0,0,0,19.914,7.269Zm-7.841,2.8H6.018V5.018h6.055Zm6.055,0a1.009,1.009,0,1,1,1.009-1.009A1.012,1.012,0,0,1,18.128,10.064Z" transform="translate(0 0)" fill="#fff"/>
+  </g>
+</svg>

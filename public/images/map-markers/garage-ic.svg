@@ -1,0 +1,7 @@
+<svg id="garage-ic" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
+  <g id="Ellipse_31" data-name="Ellipse 31" fill="#fc3b61" stroke="rgba(235,14,56,0.2)" stroke-width="4">
+    <circle cx="20" cy="20" r="20" stroke="none"/>
+    <circle cx="20" cy="20" r="18" fill="none"/>
+  </g>
+  <path id="Path_983" data-name="Path 983" d="M57.518,8.855l-8.6-6.728a.6.6,0,0,0-.739,0l-8.6,6.728a.6.6,0,0,0,.37,1.07h.96v9.641a.6.6,0,0,0,.6.6H55.59a.6.6,0,0,0,.6-.6V9.925h.96A.6.6,0,0,0,57.518,8.855Z" transform="translate(-28.348 9)" fill="#fff"/>
+</svg>

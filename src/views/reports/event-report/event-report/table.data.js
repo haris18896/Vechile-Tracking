@@ -1,0 +1,710 @@
+// ** Custom Components
+import CustomChip from 'src/@core/components/mui/chip'
+
+import { chipStatus } from 'src/components/states/chips'
+
+// ** Icon import
+import { Icon } from '@iconify/react'
+import { getNull } from 'src/utilities/utils'
+
+export const columns = ({ setShowMap, setCenter }) => {
+  return [
+    {
+      name: 'Asset Name',
+      sortable: true,
+      selector: row => row?.asset?.name
+    },
+    {
+      name: 'Date/Time',
+      sortable: true,
+      selector: row =>
+        getNull(row?.triggered_at) ? 'N/A' : `${row.triggered_at.split(' ')[0]} ${row.triggered_at.split(' ')[1]}`,
+      conditionalCellStyles: {
+        when: row => row,
+        className: ['break-words']
+      }
+    },
+    {
+      name: 'Address',
+      sortable: true,
+      selector: row => (getNull(row?.address) ? 'N/A' : `${row?.address}`)
+    },
+    {
+      name: 'Last Speed',
+      sortable: true,
+      selector: row => (getNull(row?.data.last_speed) ? 'N/A' : `${row?.data.last_speed} KM/H`)
+    },
+    {
+      name: 'Odometer',
+      sortable: true,
+      selector: row => (getNull(row?.asset.odometer_reading) ? 'N/A' : `${row?.asset.odometer_reading} KM/H`)
+    },
+    // {
+    //   name: 'Account Status',
+    //   sortable: true,
+    //   selector: row => 'Active'
+    // },
+    {
+      name: 'Event',
+      sortable: true,
+      selector: row => 'N/A'
+    },
+    {
+      name: 'Maps',
+      cell: row => {
+        return (
+          <div>
+            <CustomChip
+              size='small'
+              onClick={() => {
+                setShowMap(true)
+                if (!(getNull(row?.latitude) && getNull(row?.longitude)))
+                  setCenter({ lat: parseFloat(row?.latitude), lng: parseFloat(row?.longitude) })
+              }}
+              label={<Icon icon='mdi:map-marker' width='15' height='15' color='success' style={{ marginTop: '4px' }} />}
+              color='success'
+              skin='light'
+              sx={{
+                padding: '0.95rem 0rem'
+              }}
+            />
+          </div>
+        )
+      }
+    }
+  ]
+}
+
+export const rows = [
+  {
+    name: '769IJA',
+    status: 'idle',
+    date: '2021-05-01T12:00:00',
+    address: 'King Fahad Road, Riyadh, Saudi Arabia',
+    speed: '0',
+    odometer: '1234567',
+    ignition_status: 'off',
+    gps_status: 'off',
+    gsm_status: 'off',
+    battery: '0',
+    panic: '0',
+    latitude: '23.765788',
+    longitude: '44.567890'
+  },
+  {
+    name: '770IJA',
+    status: 'driving',
+    date: '2021-05-01T12:00:00',
+    address: 'King Fahad Road, Riyadh, Saudi Arabia',
+    speed: '44',
+    odometer: '1234567',
+    ignition_status: 'on',
+    gps_status: 'on',
+    gsm_status: 'on',
+    battery: '100',
+    panic: '0',
+    latitude: '23.765788',
+    longitude: '44.567890'
+  },
+  {
+    name: '771IJA',
+    status: 'stopped',
+    date: '2021-05-01T12:00:00',
+    address: 'King Fahad Road, Riyadh, Saudi Arabia',
+    speed: '0',
+    odometer: '1234567',
+    ignition_status: 'off',
+    gps_status: 'off',
+    gsm_status: 'off',
+    battery: '0',
+    panic: '0',
+    latitude: '23.765788',
+    longitude: '44.567890'
+  },
+  {
+    name: '772IJA',
+    status: 'idle',
+    date: '2021-05-01T12:00:00',
+    address: 'King Fahad Road, Riyadh, Saudi Arabia',
+    speed: '0',
+    odometer: '1234567',
+    ignition_status: 'off',
+    gps_status: 'off',
+    gsm_status: 'off',
+    battery: '0',
+    panic: '0',
+    latitude: '23.765788',
+    longitude: '44.567890'
+  },
+  {
+    name: '773IJA',
+    status: 'idle',
+    date: '2021-05-01T12:00:00',
+    address: 'King Fahad Road, Riyadh, Saudi Arabia',
+    speed: '0',
+    odometer: '1234567',
+    ignition_status: 'off',
+    gps_status: 'off',
+    gsm_status: 'off',
+    battery: '0',
+    panic: '0',
+    latitude: '23.765788',
+    longitude: '44.567890'
+  },
+  {
+    name: '774IJA',
+    status: 'driving',
+    date: '2021-05-01T12:00:00',
+    address: 'King Fahad Road, Riyadh, Saudi Arabia',
+    speed: '44',
+    odometer: '1234567',
+    ignition_status: 'on',
+    gps_status: 'on',
+    gsm_status: 'on',
+    battery: '100',
+    panic: '1',
+    latitude: '23.765788',
+    longitude: '44.567890'
+  },
+  {
+    name: '769IJA',
+    status: 'idle',
+    date: '2021-05-01T12:00:00',
+    address: 'King Fahad Road, Riyadh, Saudi Arabia',
+    speed: '0',
+    odometer: '1234567',
+    ignition_status: 'off',
+    gps_status: 'off',
+    gsm_status: 'off',
+    battery: '0',
+    panic: '0',
+    latitude: '23.765788',
+    longitude: '44.567890'
+  },
+  {
+    name: '770IJA',
+    status: 'driving',
+    date: '2021-05-01T12:00:00',
+    address: 'King Fahad Road, Riyadh, Saudi Arabia',
+    speed: '44',
+    odometer: '1234567',
+    ignition_status: 'on',
+    gps_status: 'on',
+    gsm_status: 'on',
+    battery: '100',
+    panic: '0',
+    latitude: '23.765788',
+    longitude: '44.567890'
+  },
+  {
+    name: '771IJA',
+    status: 'stopped',
+    date: '2021-05-01T12:00:00',
+    address: 'King Fahad Road, Riyadh, Saudi Arabia',
+    speed: '0',
+    odometer: '1234567',
+    ignition_status: 'off',
+    gps_status: 'off',
+    gsm_status: 'off',
+    battery: '0',
+    panic: '0',
+    latitude: '23.765788',
+    longitude: '44.567890'
+  },
+  {
+    name: '772IJA',
+    status: 'idle',
+    date: '2021-05-01T12:00:00',
+    address: 'King Fahad Road, Riyadh, Saudi Arabia',
+    speed: '0',
+    odometer: '1234567',
+    ignition_status: 'off',
+    gps_status: 'off',
+    gsm_status: 'off',
+    battery: '0',
+    panic: '0',
+    latitude: '23.765788',
+    longitude: '44.567890'
+  },
+  {
+    name: '773IJA',
+    status: 'idle',
+    date: '2021-05-01T12:00:00',
+    address: 'King Fahad Road, Riyadh, Saudi Arabia',
+    speed: '0',
+    odometer: '1234567',
+    ignition_status: 'off',
+    gps_status: 'off',
+    gsm_status: 'off',
+    battery: '0',
+    panic: '0',
+    latitude: '23.765788',
+    longitude: '44.567890'
+  },
+  {
+    name: '774IJA',
+    status: 'driving',
+    date: '2021-05-01T12:00:00',
+    address: 'King Fahad Road, Riyadh, Saudi Arabia',
+    speed: '44',
+    odometer: '1234567',
+    ignition_status: 'on',
+    gps_status: 'on',
+    gsm_status: 'on',
+    battery: '100',
+    panic: '1',
+    latitude: '23.765788',
+    longitude: '44.567890'
+  },
+  {
+    name: '769IJA',
+    status: 'idle',
+    date: '2021-05-01T12:00:00',
+    address: 'King Fahad Road, Riyadh, Saudi Arabia',
+    speed: '0',
+    odometer: '1234567',
+    ignition_status: 'off',
+    gps_status: 'off',
+    gsm_status: 'off',
+    battery: '0',
+    panic: '0',
+    latitude: '23.765788',
+    longitude: '44.567890'
+  },
+  {
+    name: '770IJA',
+    status: 'driving',
+    date: '2021-05-01T12:00:00',
+    address: 'King Fahad Road, Riyadh, Saudi Arabia',
+    speed: '44',
+    odometer: '1234567',
+    ignition_status: 'on',
+    gps_status: 'on',
+    gsm_status: 'on',
+    battery: '100',
+    panic: '0',
+    latitude: '23.765788',
+    longitude: '44.567890'
+  },
+  {
+    name: '771IJA',
+    status: 'stopped',
+    date: '2021-05-01T12:00:00',
+    address: 'King Fahad Road, Riyadh, Saudi Arabia',
+    speed: '0',
+    odometer: '1234567',
+    ignition_status: 'off',
+    gps_status: 'off',
+    gsm_status: 'off',
+    battery: '0',
+    panic: '0',
+    latitude: '23.765788',
+    longitude: '44.567890'
+  },
+  {
+    name: '772IJA',
+    status: 'idle',
+    date: '2021-05-01T12:00:00',
+    address: 'King Fahad Road, Riyadh, Saudi Arabia',
+    speed: '0',
+    odometer: '1234567',
+    ignition_status: 'off',
+    gps_status: 'off',
+    gsm_status: 'off',
+    battery: '0',
+    panic: '0',
+    latitude: '23.765788',
+    longitude: '44.567890'
+  },
+  {
+    name: '773IJA',
+    status: 'idle',
+    date: '2021-05-01T12:00:00',
+    address: 'King Fahad Road, Riyadh, Saudi Arabia',
+    speed: '0',
+    odometer: '1234567',
+    ignition_status: 'off',
+    gps_status: 'off',
+    gsm_status: 'off',
+    battery: '0',
+    panic: '0',
+    latitude: '23.765788',
+    longitude: '44.567890'
+  },
+  {
+    name: '774IJA',
+    status: 'driving',
+    date: '2021-05-01T12:00:00',
+    address: 'King Fahad Road, Riyadh, Saudi Arabia',
+    speed: '44',
+    odometer: '1234567',
+    ignition_status: 'on',
+    gps_status: 'on',
+    gsm_status: 'on',
+    battery: '100',
+    panic: '1',
+    latitude: '23.765788',
+    longitude: '44.567890'
+  },
+  {
+    name: '769IJA',
+    status: 'idle',
+    date: '2021-05-01T12:00:00',
+    address: 'King Fahad Road, Riyadh, Saudi Arabia',
+    speed: '0',
+    odometer: '1234567',
+    ignition_status: 'off',
+    gps_status: 'off',
+    gsm_status: 'off',
+    battery: '0',
+    panic: '0',
+    latitude: '23.765788',
+    longitude: '44.567890'
+  },
+  {
+    name: '770IJA',
+    status: 'driving',
+    date: '2021-05-01T12:00:00',
+    address: 'King Fahad Road, Riyadh, Saudi Arabia',
+    speed: '44',
+    odometer: '1234567',
+    ignition_status: 'on',
+    gps_status: 'on',
+    gsm_status: 'on',
+    battery: '100',
+    panic: '0',
+    latitude: '23.765788',
+    longitude: '44.567890'
+  },
+  {
+    name: '771IJA',
+    status: 'stopped',
+    date: '2021-05-01T12:00:00',
+    address: 'King Fahad Road, Riyadh, Saudi Arabia',
+    speed: '0',
+    odometer: '1234567',
+    ignition_status: 'off',
+    gps_status: 'off',
+    gsm_status: 'off',
+    battery: '0',
+    panic: '0',
+    latitude: '23.765788',
+    longitude: '44.567890'
+  },
+  {
+    name: '772IJA',
+    status: 'idle',
+    date: '2021-05-01T12:00:00',
+    address: 'King Fahad Road, Riyadh, Saudi Arabia',
+    speed: '0',
+    odometer: '1234567',
+    ignition_status: 'off',
+    gps_status: 'off',
+    gsm_status: 'off',
+    battery: '0',
+    panic: '0',
+    latitude: '23.765788',
+    longitude: '44.567890'
+  },
+  {
+    name: '773IJA',
+    status: 'idle',
+    date: '2021-05-01T12:00:00',
+    address: 'King Fahad Road, Riyadh, Saudi Arabia',
+    speed: '0',
+    odometer: '1234567',
+    ignition_status: 'off',
+    gps_status: 'off',
+    gsm_status: 'off',
+    battery: '0',
+    panic: '0',
+    latitude: '23.765788',
+    longitude: '44.567890'
+  },
+  {
+    name: '774IJA',
+    status: 'driving',
+    date: '2021-05-01T12:00:00',
+    address: 'King Fahad Road, Riyadh, Saudi Arabia',
+    speed: '44',
+    odometer: '1234567',
+    ignition_status: 'on',
+    gps_status: 'on',
+    gsm_status: 'on',
+    battery: '100',
+    panic: '1',
+    latitude: '23.765788',
+    longitude: '44.567890'
+  },
+
+  {
+    name: '769IJA',
+    status: 'idle',
+    date: '2021-05-01T12:00:00',
+    address: 'King Fahad Road, Riyadh, Saudi Arabia',
+    speed: '0',
+    odometer: '1234567',
+    ignition_status: 'off',
+    gps_status: 'off',
+    gsm_status: 'off',
+    battery: '0',
+    panic: '0',
+    latitude: '23.765788',
+    longitude: '44.567890'
+  },
+  {
+    name: '770IJA',
+    status: 'driving',
+    date: '2021-05-01T12:00:00',
+    address: 'King Fahad Road, Riyadh, Saudi Arabia',
+    speed: '44',
+    odometer: '1234567',
+    ignition_status: 'on',
+    gps_status: 'on',
+    gsm_status: 'on',
+    battery: '100',
+    panic: '0',
+    latitude: '23.765788',
+    longitude: '44.567890'
+  },
+  {
+    name: '771IJA',
+    status: 'stopped',
+    date: '2021-05-01T12:00:00',
+    address: 'King Fahad Road, Riyadh, Saudi Arabia',
+    speed: '0',
+    odometer: '1234567',
+    ignition_status: 'off',
+    gps_status: 'off',
+    gsm_status: 'off',
+    battery: '0',
+    panic: '0',
+    latitude: '23.765788',
+    longitude: '44.567890'
+  },
+  {
+    name: '772IJA',
+    status: 'idle',
+    date: '2021-05-01T12:00:00',
+    address: 'King Fahad Road, Riyadh, Saudi Arabia',
+    speed: '0',
+    odometer: '1234567',
+    ignition_status: 'off',
+    gps_status: 'off',
+    gsm_status: 'off',
+    battery: '0',
+    panic: '0',
+    latitude: '23.765788',
+    longitude: '44.567890'
+  },
+  {
+    name: '773IJA',
+    status: 'idle',
+    date: '2021-05-01T12:00:00',
+    address: 'King Fahad Road, Riyadh, Saudi Arabia',
+    speed: '0',
+    odometer: '1234567',
+    ignition_status: 'off',
+    gps_status: 'off',
+    gsm_status: 'off',
+    battery: '0',
+    panic: '0',
+    latitude: '23.765788',
+    longitude: '44.567890'
+  },
+  {
+    name: '774IJA',
+    status: 'driving',
+    date: '2021-05-01T12:00:00',
+    address: 'King Fahad Road, Riyadh, Saudi Arabia',
+    speed: '44',
+    odometer: '1234567',
+    ignition_status: 'on',
+    gps_status: 'on',
+    gsm_status: 'on',
+    battery: '100',
+    panic: '1',
+    latitude: '23.765788',
+    longitude: '44.567890'
+  },
+  {
+    name: '769IJA',
+    status: 'idle',
+    date: '2021-05-01T12:00:00',
+    address: 'King Fahad Road, Riyadh, Saudi Arabia',
+    speed: '0',
+    odometer: '1234567',
+    ignition_status: 'off',
+    gps_status: 'off',
+    gsm_status: 'off',
+    battery: '0',
+    panic: '0',
+    latitude: '23.765788',
+    longitude: '44.567890'
+  },
+  {
+    name: '770IJA',
+    status: 'driving',
+    date: '2021-05-01T12:00:00',
+    address: 'King Fahad Road, Riyadh, Saudi Arabia',
+    speed: '44',
+    odometer: '1234567',
+    ignition_status: 'on',
+    gps_status: 'on',
+    gsm_status: 'on',
+    battery: '100',
+    panic: '0',
+    latitude: '23.765788',
+    longitude: '44.567890'
+  },
+  {
+    name: '771IJA',
+    status: 'stopped',
+    date: '2021-05-01T12:00:00',
+    address: 'King Fahad Road, Riyadh, Saudi Arabia',
+    speed: '0',
+    odometer: '1234567',
+    ignition_status: 'off',
+    gps_status: 'off',
+    gsm_status: 'off',
+    battery: '0',
+    panic: '0',
+    latitude: '23.765788',
+    longitude: '44.567890'
+  },
+  {
+    name: '772IJA',
+    status: 'idle',
+    date: '2021-05-01T12:00:00',
+    address: 'King Fahad Road, Riyadh, Saudi Arabia',
+    speed: '0',
+    odometer: '1234567',
+    ignition_status: 'off',
+    gps_status: 'off',
+    gsm_status: 'off',
+    battery: '0',
+    panic: '0',
+    latitude: '23.765788',
+    longitude: '44.567890'
+  },
+  {
+    name: '773IJA',
+    status: 'idle',
+    date: '2021-05-01T12:00:00',
+    address: 'King Fahad Road, Riyadh, Saudi Arabia',
+    speed: '0',
+    odometer: '1234567',
+    ignition_status: 'off',
+    gps_status: 'off',
+    gsm_status: 'off',
+    battery: '0',
+    panic: '0',
+    latitude: '23.765788',
+    longitude: '44.567890'
+  },
+  {
+    name: '774IJA',
+    status: 'driving',
+    date: '2021-05-01T12:00:00',
+    address: 'King Fahad Road, Riyadh, Saudi Arabia',
+    speed: '44',
+    odometer: '1234567',
+    ignition_status: 'on',
+    gps_status: 'on',
+    gsm_status: 'on',
+    battery: '100',
+    panic: '1',
+    latitude: '23.765788',
+    longitude: '44.567890'
+  },
+  {
+    name: '769IJA',
+    status: 'idle',
+    date: '2021-05-01T12:00:00',
+    address: 'King Fahad Road, Riyadh, Saudi Arabia',
+    speed: '0',
+    odometer: '1234567',
+    ignition_status: 'off',
+    gps_status: 'off',
+    gsm_status: 'off',
+    battery: '0',
+    panic: '0',
+    latitude: '23.765788',
+    longitude: '44.567890'
+  },
+  {
+    name: '770IJA',
+    status: 'driving',
+    date: '2021-05-01T12:00:00',
+    address: 'King Fahad Road, Riyadh, Saudi Arabia',
+    speed: '44',
+    odometer: '1234567',
+    ignition_status: 'on',
+    gps_status: 'on',
+    gsm_status: 'on',
+    battery: '100',
+    panic: '0',
+    latitude: '23.765788',
+    longitude: '44.567890'
+  },
+  {
+    name: '771IJA',
+    status: 'stopped',
+    date: '2021-05-01T12:00:00',
+    address: 'King Fahad Road, Riyadh, Saudi Arabia',
+    speed: '0',
+    odometer: '1234567',
+    ignition_status: 'off',
+    gps_status: 'off',
+    gsm_status: 'off',
+    battery: '0',
+    panic: '0',
+    latitude: '23.765788',
+    longitude: '44.567890'
+  },
+  {
+    name: '772IJA',
+    status: 'idle',
+    date: '2021-05-01T12:00:00',
+    address: 'King Fahad Road, Riyadh, Saudi Arabia',
+    speed: '0',
+    odometer: '1234567',
+    ignition_status: 'off',
+    gps_status: 'off',
+    gsm_status: 'off',
+    battery: '0',
+    panic: '0',
+    latitude: '23.765788',
+    longitude: '44.567890'
+  },
+  {
+    name: '773IJA',
+    status: 'idle',
+    date: '2021-05-01T12:00:00',
+    address: 'King Fahad Road, Riyadh, Saudi Arabia',
+    speed: '0',
+    odometer: '1234567',
+    ignition_status: 'off',
+    gps_status: 'off',
+    gsm_status: 'off',
+    battery: '0',
+    panic: '0',
+    latitude: '23.765788',
+    longitude: '44.567890'
+  },
+  {
+    name: '774IJA',
+    status: 'driving',
+    date: '2021-05-01T12:00:00',
+    address: 'King Fahad Road, Riyadh, Saudi Arabia',
+    speed: '44',
+    odometer: '1234567',
+    ignition_status: 'on',
+    gps_status: 'on',
+    gsm_status: 'on',
+    battery: '100',
+    panic: '1',
+    latitude: '23.765788',
+    longitude: '44.567890'
+  }
+]
